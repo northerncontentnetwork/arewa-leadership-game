@@ -13,7 +13,7 @@
     <meta property="og:image" content="https://via.placeholder.com/1200x630/2c3e50/ffffff?text=Arewa+Leadership+Assessment">
     <meta property="og:site_name" content="Arewa Leadership Assessment Game">
     <meta name="description" content="Educational leadership assessment game for understanding governance approaches in Northern Nigeria.">
-    <meta name="keywords" content="education, leadership, assessment, game, Nigeria, governance, learning, simulation">
+    <meta name="keywords" content="education, leadership, assessment, game, Nigeria, governance, learning, simulation, Northern Civic Matters">
     
     <style>
         :root {
@@ -52,6 +52,26 @@
         
         .hidden {
             display: none !important;
+        }
+        
+        /* Creator Branding */
+        .creator-branding {
+            background: linear-gradient(135deg, #1a5276, #2c3e50);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 3px solid #ff9800;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .creator-branding h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .creator-branding p {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
         
         /* Language Selector */
@@ -474,79 +494,106 @@
             font-size: 14px;
         }
         
-        /* Community Section */
-        .community-section {
+        /* Facebook Community Section */
+        .facebook-community-section {
             background: linear-gradient(135deg, #2c3e50, #4a6491);
             color: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 15px;
             margin: 40px 0;
             text-align: center;
+            border: 3px solid #1877f2;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
-        .community-section h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+        .facebook-community-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
             color: white;
         }
         
-        .community-section p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
+        .facebook-community-section p {
+            margin-bottom: 25px;
+            font-size: 1.2rem;
             opacity: 0.9;
+            line-height: 1.6;
         }
         
-        .community-features {
+        .facebook-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }
         
-        .community-feature {
+        .facebook-feature {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
         }
         
-        .community-feature h4 {
+        .facebook-feature:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .facebook-feature h4 {
             color: white;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
         }
         
-        .community-feature p {
+        .facebook-feature p {
             margin-bottom: 0;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            font-size: 1rem;
+            opacity: 0.9;
         }
         
-        .community-buttons {
+        .facebook-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 20px;
+            margin-top: 30px;
             flex-wrap: wrap;
         }
         
-        .community-button {
-            padding: 12px 25px;
-            background: var(--secondary-color);
+        .facebook-button {
+            padding: 15px 35px;
+            background: #1877f2;
             color: white;
             border: none;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3);
         }
         
-        .community-button:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
+        .facebook-button:hover {
+            background: #0d5bb5;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+        }
+        
+        .facebook-link {
+            display: block;
+            background: white;
+            color: #1877f2;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 600px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            word-break: break-all;
+            border: 2px dashed #1877f2;
         }
         
         /* Results Breakdown */
@@ -941,6 +988,14 @@
         
         /* Responsive */
         @media (max-width: 768px) {
+            .creator-branding h1 {
+                font-size: 1.5rem;
+            }
+            
+            .creator-branding p {
+                font-size: 0.8rem;
+            }
+            
             .registration-form {
                 padding: 20px;
             }
@@ -966,11 +1021,11 @@
                 justify-content: center;
             }
             
-            .community-buttons {
+            .facebook-buttons {
                 flex-direction: column;
             }
             
-            .community-features {
+            .facebook-features {
                 grid-template-columns: 1fr;
             }
             
@@ -998,6 +1053,14 @@
     </style>
 </head>
 <body>
+    <!-- Creator Branding -->
+    <div class="creator-branding">
+        <div class="container">
+            <h1>🎮 Arewa Digital Media Content</h1>
+            <p>Creator of educational leadership games for Northern Nigeria | Empowering civic education through interactive simulations</p>
+        </div>
+    </div>
+
     <!-- Language Selector -->
     <div class="language-selector">
         <button class="language-btn" onclick="switchLanguage('en')" id="lang-en">
@@ -1012,6 +1075,7 @@
     <div class="welcome-screen" id="welcome-screen">
         <div class="registration-form">
             <h2 id="welcome-title">Arewa Leadership Assessment Game</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">Created by <strong>Arewa Digital Media Content</strong></p>
             
             <div class="simulation-period-info">
                 <h4 id="simulation-period">📅 Assessment Period</h4>
@@ -1095,7 +1159,7 @@
         <header>
             <div class="container">
                 <h1 id="game-title">Arewa Leadership Assessment Game</h1>
-                <p style="text-align: center; opacity: 0.9;" id="game-subtitle">Assess Leadership Qualities & Explore Approaches</p>
+                <p style="text-align: center; opacity: 0.9;" id="game-subtitle">By Arewa Digital Media Content | Assess Leadership Qualities & Explore Approaches</p>
                 
                 <div class="header-controls">
                     <div style="display: flex; align-items: center; gap: 10px;">
@@ -1336,60 +1400,55 @@
                             </div>
                         </div>
                         
-                        <!-- Community Section -->
-                        <div class="community-section" id="community-section" style="display: none;">
-                            <div style="text-align: left; margin-bottom: 20px;">
-                                <span style="background: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem;">Sponsored • Northern Leadership Hub</span>
+                        <!-- Facebook Community Section -->
+                        <div class="facebook-community-section" id="facebook-community-section">
+                            <div style="text-align: center; margin-bottom: 20px;">
+                                <span style="background: #ff9800; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; color: white;">🌍 JOIN OUR COMMUNITY</span>
                             </div>
                             
-                            <h3>Join Our Leadership Community</h3>
-                            <p>Join Our Growing Leadership Community<br>
-                            Connect with thousands of leadership enthusiasts, get exclusive insights, and participate in assessments</p>
+                            <h3>📢 For More Insight on Challenges Facing Northern States</h3>
+                            <p>Join our Facebook community for meaningful discussions, soluble forums, and in-depth analysis of Northern Nigeria's leadership challenges.</p>
                             
-                            <div class="community-buttons">
-                                <button class="community-button" onclick="followCommunity()">
-                                    👥 Follow Our Page
+                            <div class="facebook-features">
+                                <div class="facebook-feature">
+                                    <h4>🗣️ Discussion Forum</h4>
+                                    <p>Engage in constructive conversations about governance and leadership</p>
+                                </div>
+                                <div class="facebook-feature">
+                                    <h4>📊 Insightful Analysis</h4>
+                                    <p>Get expert perspectives on Northern Nigeria's unique challenges</p>
+                                </div>
+                                <div class="facebook-feature">
+                                    <h4>🎭 Entertainment Programs</h4>
+                                    <p>Access our 7 entertainment programs featuring Northern culture</p>
+                                </div>
+                                <div class="facebook-feature">
+                                    <h4>🤝 Community Network</h4>
+                                    <p>Connect with like-minded individuals passionate about Northern development</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Your Facebook URL -->
+                            <div class="facebook-link">
+                                🔗 <strong>Follow our Facebook Channel:</strong><br>
+                                https://facebook.com/arewadigitalmediacontent
+                            </div>
+                            
+                            <div class="facebook-buttons">
+                                <button class="facebook-button" onclick="followFacebookChannel()">
+                                    <span>👍</span> Follow Our Facebook Channel
+                                </button>
+                                <button class="facebook-button" onclick="explorePrograms()" style="background: linear-gradient(135deg, #ff9800, #ff5722);">
+                                    <span>🎭</span> Explore Our 7 Programs
+                                </button>
+                                <button class="facebook-button" onclick="joinDiscussion()" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
+                                    <span>💬</span> Join Discussion Forum
                                 </button>
                             </div>
                             
-                            <div class="community-features">
-                                <div class="community-feature">
-                                    <h4>📚 Want More Northern Content?</h4>
-                                    <p>Follow our Facebook page for exclusive Northern content</p>
-                                </div>
-                                <div class="community-feature">
-                                    <h4>📖 Folktales</h4>
-                                    <p>Ancient Northern stories and cultural heritage</p>
-                                </div>
-                                <div class="community-feature">
-                                    <h4>💖 Romantic Drama</h4>
-                                    <p>Love stories from the North</p>
-                                </div>
-                                <div class="community-feature">
-                                    <h4>🏛️ Cultural Heritage</h4>
-                                    <p>Rich Northern traditions and history</p>
-                                </div>
-                                <div class="community-feature">
-                                    <h4>🗳️ Leadership Insights</h4>
-                                    <p>In-depth analysis and discussions</p>
-                                </div>
-                                <div class="community-feature">
-                                    <h4>😄 Comedy</h4>
-                                    <p>Northern humor and entertainment</p>
-                                </div>
-                            </div>
-                            
-                            <p style="margin: 20px 0;"><strong>👍 Follow Our Facebook Page</strong></p>
-                            
-                            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
-                                <h4>🌟 More Northern Content!</h4>
-                                <p>Check out our 6 new Facebook pages for Northern Nigeria:</p>
-                                <div class="community-buttons">
-                                    <button class="community-button" onclick="viewInvitationPage()">
-                                        🔗 View Invitation Page
-                                    </button>
-                                </div>
-                            </div>
+                            <p style="margin-top: 25px; font-size: 1rem; opacity: 0.9;">
+                                Stay connected for more educational games, cultural content, and community discussions about Northern Nigeria's development!
+                            </p>
                         </div>
                         
                         <div class="share-buttons">
@@ -1665,6 +1724,20 @@ const GAME_CONFIG = {
             'simulation': 'assessment game'
         }
     }
+};
+
+// ========== YOUR FACEBOOK CHANNEL ==========
+const FACEBOOK_CHANNELS = {
+    main: "https://facebook.com/arewadigitalmediacontent",
+    programs: [
+        {name: "Northern Folktales", emoji: "📖", url: "https://facebook.com/NorthernFolktales"},
+        {name: "Northern Romance", emoji: "💖", url: "https://facebook.com/NorthernRomance"},
+        {name: "Northern Tutorials", emoji: "🎓", url: "https://facebook.com/NorthernTutorials"},
+        {name: "Northern Culture", emoji: "🏛️", url: "https://facebook.com/NorthernCulture"},
+        {name: "Northern Civic Matters", emoji: "🏛️", url: "https://facebook.com/NorthernCivicMatters"},
+        {name: "Northern Comedy", emoji: "😄", url: "https://facebook.com/NorthernComedy"},
+        {name: "Northern Theater", emoji: "🎭", url: "https://facebook.com/NorthernTheater"}
+    ]
 };
 
 // ========== GLOBAL VARIABLES ==========
@@ -2726,7 +2799,7 @@ function showResults() {
     const resultsArea = document.getElementById('results-area');
     resultsArea.classList.remove('hidden');
     
-    document.getElementById('community-section').style.display = 'block';
+    document.getElementById('facebook-community-section').style.display = 'block';
     
     updatePersonalResults();
     
@@ -3020,6 +3093,34 @@ function showTab(tabId) {
     }
 }
 
+// ========== FACEBOOK CHANNEL FUNCTIONS ==========
+function followFacebookChannel() {
+    window.open(FACEBOOK_CHANNELS.main, '_blank');
+    showNotification(gameState.language === 'en' 
+        ? 'Opening your Facebook channel...' 
+        : 'Ana buɗe tashar ku ta Facebook...');
+}
+
+function explorePrograms() {
+    let programsList = "🎭 Our 7 Entertainment Programs:\n\n";
+    FACEBOOK_CHANNELS.programs.forEach(program => {
+        programsList += `${program.emoji} ${program.name}\n`;
+    });
+    programsList += "\nVisit our Facebook page to explore them all!";
+    
+    alert(programsList);
+}
+
+function joinDiscussion() {
+    const message = gameState.language === 'en'
+        ? "Join our Facebook community for discussions about Northern Nigeria's challenges and solutions. Click OK to visit our page."
+        : "Shiga al'ummarmu ta Facebook don tattaunawa game da ƙalubalen Arewa da hanyoyin magance su. Danna OK don ziyartar shafin mu.";
+    
+    if (confirm(message)) {
+        window.open(FACEBOOK_CHANNELS.main, '_blank');
+    }
+}
+
 // ========== SAFE FACEBOOK SHARING ==========
 function shareFacebookSafe() {
     const score = gameState.assessmentScore;
@@ -3134,7 +3235,7 @@ function updateParticipantStats() {
     }
     
     const totalParticipants = document.getElementById('total-participants-count');
-    const statesParticipated = document.getElementById('states-participated');
+    const statesParticipated = document.getElementById('states-participants-count');
     
     if (totalParticipants) totalParticipants.textContent = games.length;
     
@@ -3198,7 +3299,7 @@ function resetGame() {
     document.getElementById('welcome-screen').classList.remove('hidden');
     document.querySelector('.game-area').style.display = 'grid';
     document.getElementById('results-area').classList.add('hidden');
-    document.getElementById('community-section').style.display = 'none';
+    document.getElementById('facebook-community-section').style.display = 'none';
     document.getElementById('opinion-section').style.display = 'none';
     
     document.querySelectorAll('.approach-card').forEach(card => {
@@ -3416,33 +3517,6 @@ function exportRawData() {
 
 function printLeaderboard() {
     window.print();
-}
-
-// ========== COMMUNITY FUNCTIONS ==========
-function followCommunity() {
-    const lang = gameState.language;
-    const message = lang === 'en' 
-        ? 'Thank you for your interest! Follow our Facebook page for more leadership education content.' 
-        : 'Na gode don sha\'awar ku! Bi shafin mu na Facebook don ƙarin abubuwan ilimin jagoranci.';
-    
-    showNotification(message);
-    
-    setTimeout(() => {
-        window.open('https://facebook.com', '_blank');
-    }, 1000);
-}
-
-function viewInvitationPage() {
-    const lang = gameState.language;
-    const message = lang === 'en' 
-        ? 'Opening invitation page...' 
-        : 'Ana buɗe shafin gayyata...';
-    
-    showNotification(message);
-    
-    setTimeout(() => {
-        window.open('https://example.com/northern-invitation', '_blank');
-    }, 1000);
 }
 </script>
 </body>
